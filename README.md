@@ -23,8 +23,8 @@ This repo includes steps to setup master and slave for puppet.
 | puppet cert sign --all                                    |                                                                |
 
 #### Create Menifest File
-| mkdir -p /etc/puppet/code/environments/production/menifests/
-| vim /etc/puppet/code/environments/production/menifests/site.pp
+| mkdir -p /etc/puppet/code/environments/production/manifests/
+| vim /etc/puppet/code/environments/production/manifests/site.pp
 
 ## Puppet Menifest File Code
 ```hcl
@@ -35,6 +35,7 @@ file {'/tmp/it_works.txt':
 }
 ```
 
+puppet agent --test
 
 
 
